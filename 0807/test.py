@@ -120,3 +120,50 @@
 #                     check = False
 #                     break
 # print(f"#{tc} {result}")
+
+# str1 = "XYPV"
+# str2 = "EOGGXYPVSY"
+# # print(str1, type(str1))
+# check_dic = {}
+# max_val = 0
+
+# for word in str1:
+#     check_dic[word] = 0
+    
+# for word in str2:
+#     if word in str1:
+#         check_dic[word] += 1
+
+# print(check_dic)
+
+# for key in check_dic:
+#     if check_dic[key] > max_val:
+#         max_val = check_dic[key]
+
+# print(max_val)
+
+def selection_sort(a, N):
+    for i in range(N - 1):
+        min_idx = i
+        for j in range(i + 1, N):
+            if check_dic[a[min_idx]] > check_dic[a[j]]:
+                min_idx = j
+        a[i], a[min_idx] = a[min_idx], a[i]
+    return a
+
+test_case, N = map(input().split())
+test_words = list(input().split())
+
+num_list = ["ZRO", "ONE", "TWO", "THR", "FOR", "FIV", "SIX", "SVN", "EGT", "NIN"]
+check_dic = {}
+n = 0
+    
+for word in num_list:
+    check_dic[word] = n
+    n += 1
+
+print(check_dic)
+
+sort_words = selection_sort(test_words, N)
+print(test_case)
+print(''.join(sort_words))
