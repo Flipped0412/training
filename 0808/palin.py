@@ -19,14 +19,9 @@ for test_case in range(1, T + 1):
             row_words.append(words[index][word])
             col_words.append(words[word][index])
 
-        reverse_words_row = ''.join(reverse_words_row)
-        reverse_words_col = ''.join(reverse_words_col)
-        row_words = ''.join(row_words)
-        col_words = ''.join(col_words)
-
-        if row_words == reverse_words_row:
-            result = reverse_words_row
-        elif col_words == reverse_words_col:
-            result = reverse_words_col
+        if ''.join(row_words) == ''.join(reverse_words_row):
+            result = ''.join(reverse_words_row)
+        elif ''.join(col_words) == ''.join(reverse_words_col):
+            result = ''.join(reverse_words_col)
 
     print(f"#{test_case} {result}")

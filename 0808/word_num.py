@@ -8,7 +8,7 @@ for test_case in range(1, T + 1):
 
     for word in str1:
         check_dic[word] = 0
-        
+
     for word in str2:
         if word in str1:
             check_dic[word] += 1
