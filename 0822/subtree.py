@@ -12,25 +12,10 @@ for tc in range(1, T + 1):
             arr[0][node_lst[i]] = node_lst[i + 1]
         else:
             arr[1][node_lst[i]] = node_lst[i + 1]
+    
 
-    while True:
-        if current == 0 and arr[1][N] != 0:
-            current = N
 
-        if arr[0][current] == 0:
-            tmp = current
-            current = arr[1][current]
-            arr[1][tmp] = 0
-        else:
-            tmp = current
-            current = arr[0][current]
-            arr[0][tmp] = 0
 
-        if current == 0 and arr[0][N] == 0 and arr[1][N] == 0:
-            break
-
-        check += 1
-        # print(check)
 
     print(f"#{tc} {check}")
 
