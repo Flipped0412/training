@@ -1,0 +1,54 @@
+/* 컨테이너 및 기본 스타일 */
+.container {
+    height: 2500px; /* 스크롤을 만들기 위한 높이 */
+}
+
+div {
+    margin: 10px;
+    padding: 20px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* Static Positioning */
+.static-example {
+    background-color: lightgrey;
+    position: relative;
+    /* absolute 박스 기준점 역할 */
+}
+
+/* Relative Positioning */
+.relative-example {
+    position: relative;
+    top: 30px; /* sticky 박스와 겹치게 위로 이동 */
+    left: 20px;
+    background-color: lightblue;
+    z-index: 0;
+}
+
+/* Absolute Positioning */
+.absolute-example {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    background-color: lightgreen;
+    font-size: 20px;
+    width: auto;
+    height: 30px;
+
+    /* static 박스 왼쪽에 겹치게 */
+}
+
+/* Sticky Positioning */
+.sticky-example {
+    top: 0;
+    background-color: lightcoral;
+    position: sticky;
+    z-index: 1;
+}
+
+/* Filler Content for Scrolling */
+.filler-content {
+    height: 1000px; /* 높이를 주어 스크롤을 만듦 */
+}
