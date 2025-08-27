@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 자손 결합자는 요소 안에 있는 모든 하위 요소 모두를 선택한다 */
+    div p {
+      color: blue;
+      margin-left: 40px;
+    }
+
+    /* 자식 결합자는 요소의 직계 자식에 있는 요소만 선택 */
+    div > p {
+      color: crimson;
+      margin-left: 0px;
+    }
+
+  </style>
+</head>
+<body>
+    <div>
+        <p>자식</p>
+        <section>
+            <p>손자</p>
+        </section>
+        <p>자식</p>
+    </div>
+</body>
+</html>

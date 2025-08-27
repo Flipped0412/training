@@ -13,6 +13,23 @@
       align-items: center;
     }
 
+    .banner {
+      width: 100vw;
+      min-width: 100%;
+      background-color: #333;
+      color: #fff;
+      padding: 40px 0 40px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: calc(-50vw + 50%);
+      margin-right: calc(-50vw + 50%);
+      box-sizing: border-box;
+      font-size: 30px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
     h1 {
       text-align: center;
       color: #333;
@@ -33,17 +50,20 @@
       font-weight: bold;
       color: #333;
       margin-bottom: 10px;
+      text-align: center;
     }
 
     .book-author {
       font-size: 14px;
       color: #666;
       margin-bottom: 10px;
+      text-align: center;
     }
 
     .book-description {
       font-size: 14px;
       color: #888;
+      text-align: center;
     }
 
     .section-title {
@@ -80,32 +100,184 @@
       flex-wrap: wrap;
       justify-content: center;
     }
+
+    .nav-bar {
+      width: 100vw;
+      min-width: 100%;
+      background-color: #555;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      margin-left: calc(-50vw + 50%);
+      margin-right: calc(-50vw + 50%);
+      box-sizing: border-box;
+      border-bottom: 1px solid #444;
+    }
+
+    .nav-bar .nav-btn {
+      color: #fff;
+      background: none;
+      border: none;
+      font-size: 15px;
+      padding: 10px;
+      cursor: pointer;
+      transition: background 0.2s;
+      outline: none;
+    }
+
+    .nav-bar .nav-btn:hover {
+      background-color: #444;
+    }
+
+    .nav-bar .nav-divider {
+      color: #bbb;
+      font-size: 1.1em;
+      user-select: none;
+      pointer-events: none;
+    }
+
+    .book-sections {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 30px;
+      width: 100%;
+      margin-top: 30px;
+    }
+
+    .section-title {
+      position: static;
+      background: none;
+      padding: 10px 0 20px 0;
+      margin-bottom: 0;
+      font-size: 20px;
+      font-weight: bold;
+      width: 100%;
+      display: flex;
+      justify-content: left;
+    }
+
+    .book-section {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      padding: 20px 10px 30px 10px;
+      min-width: 320px;
+      max-width: 350px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .book-list {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      width: 100%;
+    }
+
+    .book-image {
+      width: 200px;
+      height: 200px;
+      display: block;
+      margin: 0 auto 12px auto;
+      border-radius: 8px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+      object-fit: cover;
+      background: #eee;
+    }
   </style>
 </head>
 <body style="height: 3000px;">
-  <h1>도서 관리 서비스에 오신 것을 환영합니다</h1>
+  <div class="banner">도서 관리 서비스</div>
+  <nav class="nav-bar">
+    <button class="nav-btn">홈</button>
+    <span class="nav-divider">|</span>
+    <button class="nav-btn">베스트 셀러</button>
+    <span class="nav-divider">|</span>
+    <button class="nav-btn">신간 도서</button>
+    <span class="nav-divider">|</span>
+    <button class="nav-btn">사서 추천</button>
+  </nav>
 
-  <div class="section-title">베스트 셀러 목록</div>
-  <div class="book-list">
-    <div class="book-container">
-      <h2 class="book-title">도서 제목 1</h2>
-      <p class="book-author">저자 1</p>
-      <p class="book-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque at lacus vel neque ullamcorper tempus.</p>
+  <div class="book-sections">
+    <div>
+      <div class="section-title">베스트 셀러 목록</div>
+      <div class="book-section">
+        <div class="book-list">
+          <div class="book-container">
+            <img src="book1.jpg" alt="도서 이미지" class="book-image" />
+            <h2 class="book-title">도서 제목 1</h2>
+            <p class="book-author">저자 1</p>
+            <p class="book-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque at lacus vel neque ullamcorper tempus.</p>
+          </div>
+          <div class="book-container">
+            <img src="book1.jpg" alt="도서 이미지" class="book-image" />
+            <h2 class="book-title">도서 제목 2</h2>
+            <p class="book-author">저자 2</p>
+            <p class="book-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+          </div>
+          <div class="book-container">
+            <img src="book1.jpg" alt="도서 이미지" class="book-image" />
+            <h2 class="book-title">도서 제목 3</h2>
+            <p class="book-author">저자 3</p>
+            <p class="book-description">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.</p>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <div class="book-container">
-      <h2 class="book-title">도서 제목 2</h2>
-      <p class="book-author">저자 2</p>
-      <p class="book-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+    <div>
+      <div class="section-title">신간 도서 목록</div>
+      <div class="book-section">
+        <div class="book-list">
+          <div class="book-container">
+            <img src="book1.jpg" alt="도서 이미지" class="book-image" />
+            <h2 class="book-title">도서 제목 4</h2>
+            <p class="book-author">저자 4</p>
+            <p class="book-description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+          <div class="book-container">
+            <img src="book1.jpg" alt="도서 이미지" class="book-image" />
+            <h2 class="book-title">도서 제목 5</h2>
+            <p class="book-author">저자 5</p>
+            <p class="book-description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+          </div>
+          <div class="book-container">
+            <img src="book1.jpg" alt="도서 이미지" class="book-image" />
+            <h2 class="book-title">도서 제목 6</h2>
+            <p class="book-author">저자 6</p>
+            <p class="book-description">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae.</p>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-
-  <div class="section-title">신간 도서 목록</div>
-  <div class="book-list">
-    <div class="book-container">
-      <h2 class="book-title">도서 제목 3</h2>
-      <p class="book-author">저자 3</p>
-      <p class="book-description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <div>
+      <div class="section-title">사서 추천</div>
+      <div class="book-section">
+        <div class="book-list">
+          <div class="book-container">
+            <img src="book1.jpg" alt="도서 이미지" class="book-image" />
+            <h2 class="book-title">도서 제목 7</h2>
+            <p class="book-author">저자 7</p>
+            <p class="book-description">추천 도서 설명을 여기에 입력하세요.</p>
+          </div>
+          <div class="book-container">
+            <img src="book1.jpg" alt="도서 이미지" class="book-image" />
+            <h2 class="book-title">도서 제목 8</h2>
+            <p class="book-author">저자 8</p>
+            <p class="book-description">사서가 추천하는 특별한 책입니다.</p>
+          </div>
+          <div class="book-container">
+            <img src="book1.jpg" alt="도서 이미지" class="book-image" />
+            <h2 class="book-title">도서 제목 9</h2>
+            <p class="book-author">저자 9</p>
+            <p class="book-description">이 책은 독자들에게 깊은 인상을 남깁니다.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
