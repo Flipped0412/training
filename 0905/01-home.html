@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <!-- ===== NAVBAR (F01) ===== -->
+  <nav class="navbar navbar-expand-lg bg-dark fixed-top border-bottom text-light">
+    <div class="container">
+      <!-- 로고 (skeleton/imgaes/logo.png) -->
+      <a class="navbar-brand d-flex align-items-center gap-2" style="height: 5rem;" href="01-home.html">
+        <img id="logo-img" src="skeleton/images/logo.png" alt="logo">
+      </a>
+
+      <!-- 992px 미만 토글 버튼 -->
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- 메뉴 -->
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="text-end nav-link text-light active" href="01-home.html">Home</a></li>
+          <li class="nav-item"><a class="text-end nav-link text-light" href="02-community.html">Community</a></li>
+          <li class="nav-item">
+            <a class="text-end ms-lg-2 nav-link text-light" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 고정 네비바가 내용을 가리지 않도록 여백(헤더에 CSS 못 넣으므로 스페이서로 처리) -->
+  <div style="height:72px"></div>
+
+  <!-- ===== LOGIN MODAL (F02) ===== -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5">로그인</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="닫기"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="loginEmail" class="form-label">이메일</label>
+              <input type="email" class="form-control" id="loginEmail" placeholder="name@example.com" required>
+            </div>
+            <div class="mb-3">
+              <label for="loginPw" class="form-label">비밀번호</label>
+              <input type="password" class="form-control" id="loginPw" placeholder="••••••••" required>
+            </div>
+            <div class="modal-btn-con d-flex justify-content-end">
+              <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">Close</button>
+              <button type="submit" class="btn btn-primary w-10 align-end">로그인</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ===== HEADER (F03) ===== -->
+  <header>
+    <!-- ≥1400px: 1320px 고정 / <1400px: 100% -->
+    <div class="container-xxl">
+      <div id="heroCarousel" class="carousel slide header-carousel" data-bs-ride="carousel">
+        <!-- 인디케이터 -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+            aria-label="슬라이드 1"></button>
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="슬라이드 2"></button>
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="슬라이드 3"></button>
+        </div>
+
+        <!-- 슬라이드 -->
+        <div class="carousel-inner rounded-4 overflow-hidden shadow-sm">
+          <div class="carousel-item active">
+            <img src="skeleton/images/header1.jpg" class="d-block w-100" alt="slide1">
+            <div class="carousel-caption text-start">
+              <!-- <h5 class="mb-1">오늘의 추천</h5>
+              <p class="mb-0">개인화 취향 기반으로 큐레이션</p> -->
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="skeleton/images/header2.jpg" class="d-block w-100" alt="slide2">
+            <div class="carousel-caption">
+              <!-- <h5 class="mb-1">장르별 탐색</h5>
+              <p class="mb-0">액션부터 드라마까지 한 번에</p> -->
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="skeleton/images/header3.jpg" class="d-block w-100" alt="slide3">
+            <div class="carousel-caption text-end">
+              <!-- <h5 class="mb-1">유사 작품 찾기</h5>
+              <p class="mb-0">좋아한 영화와 닮은 작품을 바로</p> -->
+            </div>
+          </div>
+        </div>
+
+        <!-- 컨트롤 -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">이전</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">다음</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== SECTION: Movies (F04, F05) ===== -->
+  <section class="section-movies">
+    <div class="container d-flex align-items-center justify-content-center box-office py-4">Box Office</div>
+    <div class="container">
+      <!-- <768: 1개 / 768~991: 2개 / ≥992: 3개 -->
+      <div class="row g-3 row-cols-1 row-cols-md-2 row-cols-lg-3">
+
+        <!-- Card 1 -->
+        <div class="col d-flex">
+          <div class="card shadow-sm w-100 h-100">
+            <div class="movie-img-con w-100 h-100 overflow-hidden d-flex align-items-center">
+              <img src="skeleton/images/movie1.jpg" class="card-img-top" alt="movie1">
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">쇼생크 탈출</h5>
+              <p class="card-text text-muted">
+                감옥 탈출하고 갓생살기
+              </p>
+              <!-- 필요 시 버튼 영역: <div class="mt-auto"> ... </div> -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col d-flex">
+          <div class="card shadow-sm w-100 h-100">
+            <div class="movie-img-con w-100 h-100 overflow-hidden d-flex align-items-center">
+              <img src="skeleton/images/movie2.jpg" class="card-img-top" alt="movie2">
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">스친들러스리스트</h5>
+              <p class="card-text text-muted">
+                성냥팔이 소녀 같은 느낌인가
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col d-flex">
+          <div class="card shadow-sm w-100 h-100">
+            <div class="movie-img-con w-100 h-100 overflow-hidden d-flex align-items-center">
+              <img src="skeleton/images/movie3.jpg" class="card-img-top" alt="movie3">
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">더 다크나이트</h5>
+              <p class="card-text text-muted">
+                고담 시티 깨부수기
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="col d-flex">
+          <div class="card shadow-sm w-100 h-100">
+            <div class="movie-img-con w-100 h-100 overflow-hidden d-flex align-items-center">
+              <img src="skeleton/images/movie4.jpg" class="card-img-top" alt="movie4">
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">파이트 클럽</h5>
+              <p class="card-text text-muted">
+                마 니 좀 치나?
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 5 -->
+        <div class="col d-flex">
+          <div class="card shadow-sm w-100 h-100">
+            <div class="movie-img-con w-100 h-100 overflow-hidden d-flex align-items-center">
+              <img src="skeleton/images/movie5.jpg" class="card-img-top" alt="movie5">
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">갓 파 더</h5>
+              <p class="card-text text-muted">
+                킹 갓 제네럴 파더
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 6 -->
+        <div class="col d-flex">
+          <div class="card shadow-sm w-100 h-100">
+            <div class="movie-img-con w-100 h-100 overflow-hidden d-flex align-items-center">
+              <img src="skeleton/images/movie6.jpg" class="card-img-top" alt="movie6">
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">반지의 제왕</h5>
+              <p class="card-text text-muted">
+                금쪽이 케어하기(근데 반지 걍 골룸 돌려줘라;)
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 필요하면 카드 더 복제해서 사용 -->
+      </div>
+    </div>
+  </section>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COMMUNITY</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-dark fixed-top border-bottom text-light">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" style="height: 5rem;" href="01-home.html">
+        <img id="logo-img" src="skeleton/images/logo.png" alt="logo">
+      </a>
+
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="text-end nav-link text-light" href="01-home.html">Home</a></li>
+          <li class="nav-item"><a class="text-end nav-link text-light active" href="02-community.html">Community</a>
+          </li>
+          <li class="nav-item">
+            <a class="text-end ms-lg-2 nav-link text-light" data-bs-toggle="modal"
+              data-bs-target="#loginModal">Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div style="height:72px"></div>
+
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5">로그인</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="닫기"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="loginEmail" class="form-label">이메일</label>
+              <input type="email" class="form-control" id="loginEmail" placeholder="name@example.com" required>
+            </div>
+            <div class="mb-3">
+              <label for="loginPw" class="form-label">비밀번호</label>
+              <input type="password" class="form-control" id="loginPw" placeholder="••••••••" required>
+            </div>
+            <div class="modal-btn-con d-flex justify-content-end">
+              <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">Close</button>
+              <button type="submit" class="btn btn-primary w-10 align-end">로그인</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 페이지 타이틀 -->
+  <h1 class="text-center my-5 commu-title">Community</h1>
+
+  <div class="container my-3">
+    <div class="row g-3 align-items-start">
+
+      <!-- ===== Aside (왼쪽, lg 이상 2/12, 그 미만은 12/12) ===== -->
+      <aside class="col-12 col-lg-2">
+        <div class="outline-aside">
+          <!-- 예시처럼 '세로 리스트' 유지 (가로 전환 X) -->
+          <div class="list-group">
+            <a class="list-group-item list-group-item-action active" aria-current="true">Box Office</a>
+            <a class="list-group-item list-group-item-action">Movies</a>
+            <a class="list-group-item list-group-item-action">Genres</a>
+            <a class="list-group-item list-group-item-action">Actors</a>
+          </div>
+        </div>
+      </aside>
+
+      <!-- ===== Section (오른쪽, lg 이상 10/12, 그 미만은 12/12) ===== -->
+      <section class="col-12 col-lg-10">
+        <div class="outline-section">
+          <!-- ≥992px: 테이블 -->
+          <div class="d-none d-lg-block">
+            <div class="table-responsive">
+              <table class="table table-hover align-middle mb-0 table-striped">
+                <thead class="table-light">
+                  <tr>
+                    <th scope="col" style="width: 20%;">영화 제목</th>
+                    <th scope="col" style="width: 40%;">글 제목</th>
+                    <th scope="col" style="width: 20%;">작성자</th>
+                    <th scope="col" style="width: 20%;">작성 시간</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Great Movie title</td>
+                    <td>Best Movie Ever</td>
+                    <td>user</td>
+                    <td>1 minutes ago</td>
+                  </tr>
+                  <tr>
+                    <td>Great Movie title</td>
+                    <td>Movie Test</td>
+                    <td>user</td>
+                    <td>1 minutes ago</td>
+                  </tr>
+                  <tr>
+                    <td>Great Movie title</td>
+                    <td>Movie Test</td>
+                    <td>user</td>
+                    <td>1 minutes ago</td>
+                  </tr>
+                  <tr>
+                    <td>Great Movie title</td>
+                    <td>Movie Test</td>
+                    <td>user</td>
+                    <td>1 minutes ago</td>
+                  </tr>
+                  <tr>
+                    <td>Great Movie title</td>
+                    <td>Movie Test</td>
+                    <td>user</td>
+                    <td>1 minutes ago</td>
+                  </tr>
+                  <tr>
+                    <td>Great Movie title</td>
+                    <td>Movie Test</td>
+                    <td>user</td>
+                    <td>1 minutes ago</td>
+                  </tr>
+                  <tr>
+                    <td>Great Movie title</td>
+                    <td>Movie Test</td>
+                    <td>user</td>
+                    <td>1 minutes ago</td>
+                  </tr>
+                  <tr>
+                    <td>Great Movie title</td>
+                    <td>Movie Test</td>
+                    <td>user</td>
+                    <td>1 minutes ago</td>
+                  </tr>
+                  <tr>
+                    <td>Great Movie title</td>
+                    <td>Movie Test</td>
+                    <td>user</td>
+                    <td>1 minutes ago</td>
+                  </tr>
+                  <tr>
+                    <td>Great Movie title</td>
+                    <td>Movie Test</td>
+                    <td>user</td>
+                    <td>1 minutes ago</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- <992px: article 카드 -->
+          <div class="d-lg-none">
+            <article class="card">
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <h5 class="mb-1">Best Movie Ever</h5>
+                  <span class="text-muted small">user</span>
+                </div>
+                <div class="text-muted">Great Movie Title</div>
+                <div class="text-muted small">1 minutes ago</div>
+              </div>
+            </article>
+            <article class="card mb-3">
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <h5 class="mb-1">Movie Test</h5>
+                  <span class="text-muted small">user</span>
+                </div>
+                <div class="text-muted">Great Movie Title</div>
+                <div class="text-muted small">1 minutes ago</div>
+              </div>
+            </article>
+            <article class="card mb-0">
+              <div class="card-body">
+                <div class="d-flex justify-content-between">
+                  <h5 class="mb-1">Movie Test</h5>
+                  <span class="text-muted small">user</span>
+                </div>
+                <div class="text-muted">Great Movie Title</div>
+                <div class="text-muted small">1 minutes ago</div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <!-- ===== PAGINATION (F08) ===== -->
+      <div class="container my-4">
+        <div class="outline-pagination p-3">
+          <nav aria-label="페이지 네비게이션">
+            <ul class="pagination justify-content-center mb-0">
+              <li class="page-item disabled">
+                <span class="page-link">Previous</span>
+              </li>
+              <li class="page-item active" aria-current="page">
+                <span class="page-link">1</span>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+</html>

@@ -1,0 +1,72 @@
+#logo-img {
+  width: auto;
+  height: inherit;
+}
+
+nav > div.container {
+  max-width: inherit;
+}
+
+.movie-img-con{
+  max-height: 520px;
+}
+
+.box-office {
+  font-size: 4rem;
+}
+
+.commu-title {
+  font-size: 4rem;
+}
+
+/* ===== <992px (모바일) 전용 스타일 ===== */
+@media (max-width: 991.98px) {
+
+  /* 데모용 윤곽선/여백 제거 (예시 이미지처럼 깔끔하게) */
+  .outline-aside,
+  .outline-section,
+  .outline-pagination {
+    border: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Aside: 얇은 테두리 + 라인 분리된 리스트 */
+  .outline-aside .list-group {
+    border: 1px solid var(--bs-border-color);
+    border-radius: .5rem;
+    overflow: hidden;
+    background: #fff;
+  }
+  .outline-aside .list-group-item {
+    border: 0;
+    border-bottom: 1px solid var(--bs-border-color);
+  }
+  .outline-aside .list-group-item:last-child {
+    border-bottom: 0;
+  }
+
+  /* Section: 카드 느낌 제거 + 항목별 구분선 */
+  .outline-section .d-lg-none .card {
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    border-radius: 0;
+    margin-bottom: 0;          /* 간격은 구분선으로 처리 */
+  }
+  .outline-section .d-lg-none .card .card-body {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--bs-border-color);
+  }
+  .outline-section .d-lg-none .card:first-child .card-body {
+    border-top: 1px solid var(--bs-border-color);
+  }
+
+  /* 자잘한 타이포 간격 */
+  .outline-section .d-lg-none h5 { margin-bottom: .25rem; }
+  .outline-section .d-lg-none .text-muted.small { margin-top: .125rem; }
+}
+
+/* div.modal-btn-con {
+  display: flex;
+  justify-self: flex-end;
+} */
