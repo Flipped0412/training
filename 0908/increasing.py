@@ -32,18 +32,25 @@
 ################################### 하.. 혜야~ 어찌 떠나려는거야 안 녕이란 그런 잔인한 말로 ########################
 
 ####### 다시 풀거야. 이해를 애초에 잘못해와부려쓰 . .  ###########
+
 T = int(input())
 for tc in range(1, T + 1):
     N = int(input())
     num_li = list(map(int, input().split()))
     max_multi = -1
 
-    for index in range(1, len(num_li) - 2):
-        for next_index in range(index + 1, len(num_li) - 1):
+    for index in range(N - 1):
+        for next_index in range(index + 1, N):
             num_multi = num_li[index] * num_li[next_index]
-            if len(str(num_multi)) == 1 or str(num_multi)[0] <= str(num_multi)[1]:
-                if max_multi < num_multi:
-                    max_multi = num_multi
+            num_multi_str = str(num_multi)
+            check = True
 
-    
+            for multi_idx in range(len(num_multi_str) - 1):
+                if num_multi_str[multi_idx] > num_multi_str[multi_idx + 1]:
+                    check = False
+                    break
+
+            if check and num_multi > max_multi:
+                max_multi = num_multi
+
     print(f"#{tc} {max_multi}")
