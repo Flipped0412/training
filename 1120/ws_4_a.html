@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    table {
+      width: 100%;
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+
+    td {
+      width: 50px;
+      height: 50px;
+      border: 1px solid black;
+      text-align: center;
+    }
+
+    .theme-color {
+      background-color: crimson;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <table>
+    <tr>
+      <td>Lorem, ipsum dolor.</td>
+      <td>Lorem, ipsum dolor.</td>
+      <td>Lorem, ipsum dolor.</td>
+    </tr>
+    <tr>
+      <td>Lorem, ipsum dolor.</td>
+      <td>Lorem, ipsum dolor.</td>
+      <td>Lorem, ipsum dolor.</td>
+    </tr>
+    <tr>
+      <td>Lorem, ipsum dolor.</td>
+      <td>Lorem, ipsum dolor.</td>
+      <td>Lorem, ipsum dolor.</td>
+    </tr>
+  </table>
+
+  <script>
+    // table 요소에 클릭이 발생하는지 확인
+    const table = document.querySelector('table')
+
+    // table 요소에 클릭 이벤트 발생하면 어떤 동작을 하겠다
+    // addEventListener('이벤트 이름', '핸들러함수')
+    table.addEventListener('click', function (event) {
+      console.log('클릭됐슴다')
+      // 실제로 어떤 요소가 클릭되었는지 정보는 이벤트 객체가 가지고 있슨.
+      console.log(event)
+
+      // event.target은 실제 이벤트가 발생한 요소
+      const target = event.target
+
+      // 클릭한 요소가 td인지 확인
+      if (target.tagName ===  'TD'){
+        target.classList.toggle('theme-color')
+      }
+    })
+
+  </script>
+</body>
+
+</html>
