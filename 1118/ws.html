@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p class="text">Lorem imsum</p>
+  <div id="container">
+    <ul>
+      <li class="list-content">content1</li>
+      <li class="list-content">content2</li>
+      <li class="list-content">content3</li>
+      <li class="list-content">content4</li>
+    </ul>
+    <a href="#">hyper link</a>
+  </div>
+
+  <script>
+    // 여기에 코드를 작성하면 브라우저에서 자바스크립트가 실행
+    console.log('hello world!')
+    // 자바 스크립트의 목적 : html 요소를 조작
+    // 조작 할 수 있도록 document 객체 제공
+    // html 요소들은 트리구조로 표현 가능
+    // 이런 요소들을 js에서 객체로 활용할 수 있도록 도와주는 구조가 DOM
+
+    // const pTag = document.querySelector('p')
+    
+    const pTag = document.querySelectorAll('p')
+    console.log(pTag)
+    console.log('------------------------')
+
+
+  </script>
+</body>
+</html>

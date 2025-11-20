@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .article {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+      margin-bottom: 10px;
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+  </div>
+  <script>
+    // js만 작성해서 html 요소 생성 및 조작 해봅시다
+    // div 요소 생성
+    const articleTag = document.createElement('div')
+    articleTag.innerText = 'Hello world!'
+    // 요소를 생성해도 화면에 바로 보이진 않습니다.
+    // 그저 객체를 생성했을 뿐 출력하려면 더 해야겠죠
+    // 화면에 보이는 DOM(요소들) 사이에 넣어야합니다.
+    const containerTag = document.querySelector('#container')
+    containerTag.appendChild(articleTag)
+
+    const h1Tag = document.createElement('h1')
+    const pTag = document.createElement('p')
+    h1Tag.innerText = 'Article Title'
+    pTag.style = 'border-top : 1px solid black;'
+    pTag.innerText = 'This is a article content'
+    articleTag.appendChild(h1Tag)
+    articleTag.appendChild(pTag)
+    articleTag.classList.add('article')
+
+  </script>
+</body>
+
+</html>
